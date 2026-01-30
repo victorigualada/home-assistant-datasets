@@ -1,0 +1,19 @@
+---
+uuid: a50f9943-5529-4e59-abea-a37d8a338ca8
+timestamp: 2026-01-30 21:33:13.434595
+scrape_config:
+  dataset: automations
+  dataset_path: datasets/automations
+  dataset_version: v0
+  model_id: mistral-large-2512
+  model_output_path: reports/automations/2026.2.0b0
+version: 2026.2.0b0
+context:
+  user: runner
+  argv:
+  - /home/runner/work/openrouter-benchmarks/openrouter-benchmarks/.venv/bin/pytest
+  - home_assistant_datasets/tool/automation/collect
+  - --models=mistral-large-2512
+  - --dataset=datasets/automations/
+  - --model_output_dir=reports/automations/2026.2.0b0
+notes: ''
