@@ -1,0 +1,7 @@
+---
+- model_id: kimi-k2.5
+  good_percent: 97.8%
+  confidence_interval: 1.5%
+  good: 362
+  total: 370
+

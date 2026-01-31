@@ -1,0 +1,19 @@
+---
+uuid: 6e3539f0-1d8c-4ce2-8376-be6b30c4b745
+timestamp: 2026-01-31 19:48:29.730497
+scrape_config:
+  dataset: automations
+  dataset_path: datasets/automations
+  dataset_version: v0
+  model_id: kimi-k2.5
+  model_output_path: reports/automations/2026.2.0b1
+version: 2026.2.0b1
+context:
+  user: runner
+  argv:
+  - /home/runner/work/openrouter-benchmarks/openrouter-benchmarks/.venv/bin/pytest
+  - home_assistant_datasets/tool/automation/collect
+  - --models=kimi-k2.5
+  - --dataset=datasets/automations/
+  - --model_output_dir=reports/automations/2026.2.0b1
+notes: ''
