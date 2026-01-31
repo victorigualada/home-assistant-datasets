@@ -1,0 +1,26 @@
+---
+model_id: kimi-k2.5
+domain: open_router
+description: OpenRouter integration using Kimi K2.5
+categories:
+  - openrouter
+  - cloud
+urls:
+  - https://openrouter.ai/moonshotai/kimi-k2.5
+config_entry_data:
+  api_key: !secret openrouter_api_key
+subentries_data:
+  - subentry_type: conversation
+    title: Mock Title
+    data:
+      model: moonshotai/kimi-k2.5
+      llm_hass_api: assist
+  - subentry_type: ai_task_data
+    title: Mock Title
+    data:
+      model: moonshotai/kimi-k2.5
+      llm_hass_api: assist
+rpm: 250
+cost:
+  input_tokens: 0.5
+  output_tokens: 2.8
