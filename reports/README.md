@@ -21,6 +21,7 @@
 | ministral-3-3b | $${72.0\\% \space\color{gray}\tiny{\textsf{(CI: 4.1, 2026.1.1)}}}$$ | $${81.6\\% \space\color{gray}\tiny{\textsf{(CI: 5.4, 2026.1.1)}}}$$ | $${90.3\\% \space\color{gray}\tiny{\textsf{(CI: 3.0, 2026.1.1)}}}$$ | $${0.0\\% \space\color{gray}\tiny{\textsf{(CI: 0.0, 2026.1.1)}}}$$ | $${80.4\\% \space\color{gray}\tiny{\textsf{(CI: 2.4, avg)}}}$$ |
 | qwen3-8b | $${82.8\\% \space\color{gray}\tiny{\textsf{(CI: 3.4, 2025.7.1)}}}$$ | $${93.4\\% \space\color{gray}\tiny{\textsf{(CI: 3.5, 2025.7.1)}}}$$ | $${70.0\\% \space\color{gray}\tiny{\textsf{(CI: 4.7, 2025.7.1)}}}$$ | $${1.7\\% \space\color{gray}\tiny{\textsf{(CI: 3.2, 2025.7.1)}}}$$ | $${80.2\\% \space\color{gray}\tiny{\textsf{(CI: 2.4, avg)}}}$$ |
 | gpt-4.1-nano | $${74.7\\% \space\color{gray}\tiny{\textsf{(CI: 4.0, 2025.4.3)}}}$$ | $${92.9\\% \space\color{gray}\tiny{\textsf{(CI: 3.6, 2025.4.3)}}}$$ | $${75.9\\% \space\color{gray}\tiny{\textsf{(CI: 4.4, 2025.5.0.dev0)}}}$$ | $${46.7\\% \space\color{gray}\tiny{\textsf{(CI: 12.6, 2025.4.3)}}}$$ | $${78.6\\% \space\color{gray}\tiny{\textsf{(CI: 2.5, avg)}}}$$ |
+| qwen3-235b-a22b-2507 | $${75.2\\% \space\color{gray}\tiny{\textsf{(CI: 3.9, 2026.2.0b1)}}}$$ | $${88.3\\% \space\color{gray}\tiny{\textsf{(CI: 4.5, 2026.2.0b1)}}}$$ | $${70.5\\% \space\color{gray}\tiny{\textsf{(CI: 4.6, 2026.2.0b1)}}}$$ | $${13.3\\% \space\color{gray}\tiny{\textsf{(CI: 8.6, 2026.2.0b1)}}}$$ | $${76.0\\% \space\color{gray}\tiny{\textsf{(CI: 2.6, avg)}}}$$ |
 | gemini-2.0-flash | $${68.7\\% \space\color{gray}\tiny{\textsf{(CI: 4.2, 2025.4.3)}}}$$ | $${90.3\\% \space\color{gray}\tiny{\textsf{(CI: 4.1, 2025.4.3)}}}$$ | $${78.4\\% \space\color{gray}\tiny{\textsf{(CI: 5.9, 2025.4.3)}}}$$ | $${71.7\\% \space\color{gray}\tiny{\textsf{(CI: 11.4, 2025.4.3)}}}$$ | $${75.9\\% \space\color{gray}\tiny{\textsf{(CI: 2.9, avg)}}}$$ |
 | qwen3-4b-instruct | $${71.7\\% \space\color{gray}\tiny{\textsf{(CI: 4.1, 2026.1.1)}}}$$ | $${86.7\\% \space\color{gray}\tiny{\textsf{(CI: 4.7, 2026.1.1)}}}$$ | $${74.1\\% \space\color{gray}\tiny{\textsf{(CI: 4.5, 2026.1.1)}}}$$ | $${0.0\\% \space\color{gray}\tiny{\textsf{(CI: 0.0, 2026.1.1)}}}$$ | $${75.4\\% \space\color{gray}\tiny{\textsf{(CI: 2.6, avg)}}}$$ |
 | qwen3-4b-instruct-2507-iq4-nl | $${71.3\\% \space\color{gray}\tiny{\textsf{(CI: 4.1, 2025.12.4)}}}$$ |  |  |  | $${71.3\\% \space\color{gray}\tiny{\textsf{(CI: 4.1, avg)}}}$$ |
@@ -390,6 +391,7 @@ As the strongest model in the 30B class, GLM-4.7-Flash offers a new option for l
 
 More information:
 - https://huggingface.co/zai-org/GLM-4.7-Flash
+- https://ollama.com/library/glm-4.7-flash
 
 
 ### gpt-3.5
@@ -561,6 +563,16 @@ Qwen3 is the large language model series developed by Qwen team, Alibaba Cloud. 
 More information:
 - https://qwenlm.github.io/blog/qwen3/
 - https://ollama.com/library/qwen3
+
+
+### qwen3-235b-a22b-2507
+
+Qwen3-235B-A22B-Instruct-2507 is a multilingual, instruction-tuned mixture-of-experts language model based on the Qwen3-235B architecture, with 22B active parameters per forward pass. It is optimized for general-purpose text generation, including instruction following, logical reasoning, math, code, and tool usage. The model supports a native 262K context length and does not implement "thinking mode" (<think> blocks).  Compared to its base variant, this version delivers significant gains in knowledge coverage, long-context reasoning, coding benchmarks, and alignment with open-ended tasks. It is particularly strong on multilingual understanding, math reasoning (e.g., AIME, HMMT), and alignment evaluations like Arena-Hard and WritingBench.
+
+
+
+More information:
+- https://openrouter.ai/qwen/qwen3-235b-a22b-2507
 
 
 ### qwen3-30b-a3b-instruct

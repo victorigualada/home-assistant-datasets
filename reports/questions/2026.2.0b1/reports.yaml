@@ -1,0 +1,7 @@
+---
+- model_id: qwen3-235b-a22b-2507
+  good_percent: 70.5%
+  confidence_interval: 4.6%
+  good: 261
+  total: 370
+

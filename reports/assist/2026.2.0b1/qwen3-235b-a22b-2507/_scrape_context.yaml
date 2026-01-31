@@ -1,0 +1,19 @@
+---
+uuid: f6c68288-611c-4226-b139-3f57ea64b4c1
+timestamp: 2026-01-31 20:46:27.924056
+scrape_config:
+  dataset: assist
+  dataset_path: datasets/assist
+  dataset_version: v2
+  model_id: qwen3-235b-a22b-2507
+  model_output_path: reports/assist/2026.2.0b1
+version: 2026.2.0b1
+context:
+  user: runner
+  argv:
+  - /home/runner/work/openrouter-benchmarks/openrouter-benchmarks/.venv/bin/pytest
+  - home_assistant_datasets/tool/assist/collect
+  - --models=qwen3-235b-a22b-2507
+  - --dataset=datasets/assist/
+  - --model_output_dir=reports/assist/2026.2.0b1
+notes: ''
