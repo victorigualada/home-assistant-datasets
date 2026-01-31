@@ -1,0 +1,19 @@
+---
+uuid: 931d7b2f-1aef-4cf1-9b92-ab3ea40735d0
+timestamp: 2026-01-31 19:28:59.516449
+scrape_config:
+  dataset: assist-mini
+  dataset_path: datasets/assist-mini
+  dataset_version: v1
+  model_id: mistral-large-2512
+  model_output_path: reports/assist-mini/2026.2.0b1
+version: 2026.2.0b1
+context:
+  user: runner
+  argv:
+  - /home/runner/work/openrouter-benchmarks/openrouter-benchmarks/.venv/bin/pytest
+  - home_assistant_datasets/tool/assist/collect
+  - --models=mistral-large-2512
+  - --dataset=datasets/assist-mini/
+  - --model_output_dir=reports/assist-mini/2026.2.0b1
+notes: ''

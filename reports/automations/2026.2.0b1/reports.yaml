@@ -1,0 +1,7 @@
+---
+- model_id: mistral-large-2512
+  good_percent: 66.7%
+  confidence_interval: 11.9%
+  good: 40
+  total: 60
+
