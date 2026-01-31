@@ -1,0 +1,19 @@
+---
+uuid: af515fa7-1f6e-4d62-80f5-801743c6e3e1
+timestamp: 2026-01-31 21:13:50.965010
+scrape_config:
+  dataset: assist
+  dataset_path: datasets/assist
+  dataset_version: v2
+  model_id: gemma-3-27b-it
+  model_output_path: reports/assist/2026.2.0b1
+version: 2026.2.0b1
+context:
+  user: runner
+  argv:
+  - /home/runner/work/openrouter-benchmarks/openrouter-benchmarks/.venv/bin/pytest
+  - home_assistant_datasets/tool/assist/collect
+  - --models=gemma-3-27b-it
+  - --dataset=datasets/assist/
+  - --model_output_dir=reports/assist/2026.2.0b1
+notes: ''
