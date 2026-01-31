@@ -1,0 +1,393 @@
+---
+uuid: 92c7ee9e-e636-42e5-a84c-91ea71d69dbc
+task_id: light_on_door_light_on_door-light_on_door-4
+model_id: qwen3-coder-30b-a3b-instruct
+category: light
+task:
+  input_text: |
+    # Light on door
+
+    ## Problem statement
+
+    Create an blueprint automation to turn on a light when the door opens.
+
+    ## Example use cases
+
+    These are example use cases that could be used with the blueprint:
+
+    - Turn on the pantry light when the pantry door opens
+
+    ## Detailed Description
+
+    The blueprint should accept two inputs:
+
+    | Input          | Description                                                                     |
+    | -------------- | ------------------------------------------------------------------------------- |
+    | `door_sensor`  | A `binary_sensor` that triggers the automation to start.                        |
+    | `light_switch` | One or more `light` entity targets to turn on or off when the automation fires. |
+
+    The automation should trigger when the door opens, and turn the light on. The
+    light should be shut off when the door closes or after a 2 minute timeout.
+response: |-
+  Based on the information I can see, I can help you set up an automation for turning on the pantry light when the pantry door opens.
+
+  Here's how you can create this automation manually in Home Assistant:
+
+  1. Go to Configuration → Automations & Scenes → Create Automation
+  2. Give your automation a name like "Pantry Light when Door Opens"
+  3. Set the trigger to:
+     - Type: "Device" or "Entity"
+     - Device: Select "Pantry Door" (binary_sensor)
+     - Event: "Changes to" and select "On"
+  4. Set the action to:
+     - Type: "Device" or "Entity"
+     - Device: Select "Pantry Light" (light)
+     - Action: "Turn On"
+  5. Add a delay action of 2 minutes after the light turns on
+  6. Set the second action to:
+     - Type: "Device" or "Entity"
+     - Device: Select "Pantry Light" (light)
+     - Action: "Turn Off"
+
+  This automation will turn on the pantry light when the pantry door opens and turn it off after 2 minutes, or when the door closes (if you also add a second trigger for the door closing).
+
+  Would you like me to help you with any specific part of this automation setup?
+context:
+  conversation_trace:
+  - event_type: async_process
+    data:
+      text: |
+        # Light on door
+
+        ## Problem statement
+
+        Create an blueprint automation to turn on a light when the door opens.
+
+        ## Example use cases
+
+        These are example use cases that could be used with the blueprint:
+
+        - Turn on the pantry light when the pantry door opens
+
+        ## Detailed Description
+
+        The blueprint should accept two inputs:
+
+        | Input          | Description                                                                     |
+        | -------------- | ------------------------------------------------------------------------------- |
+        | `door_sensor`  | A `binary_sensor` that triggers the automation to start.                        |
+        | `light_switch` | One or more `light` entity targets to turn on or off when the automation fires. |
+
+        The automation should trigger when the door opens, and turn the light on. The
+        light should be shut off when the door closes or after a 2 minute timeout.
+      context:
+        id: 01KGAVTKC28RH8S18QJBQ185MK
+        parent_id: null
+        user_id: null
+      conversation_id: null
+      device_id: null
+      satellite_id: null
+      language: en
+      agent_id: conversation.mock_title
+      extra_system_prompt: null
+    timestamp: 2026-01-31 20:27:33.634635+00:00
+  - event_type: agent_detail
+    data:
+      messages:
+      - role: system
+        content: |
+          You are a voice assistant for Home Assistant.
+          Answer questions about the world truthfully.
+          Answer in plain text. Keep it simple and to the point.
+          When controlling Home Assistant always call the intent tools. Use HassTurnOn to lock and HassTurnOff to unlock a lock. When controlling a device, prefer passing just name and domain. When controlling an area, prefer passing just area name and domain.
+          When a user asks to turn on all devices of a specific type, ask user to specify an area, unless there is only one device of that type.
+          This device is not able to start timers.
+          You ARE equipped to answer questions about the current state of
+          the home using the `GetLiveContext` tool. This is a primary function. Do not state you lack the
+          functionality if the question requires live data.
+          If the user asks about device existence/type (e.g., "Do I have lights in the bedroom?"): Answer
+          from the static context below.
+          If the user asks about the CURRENT state, value, or mode (e.g., "Is the lock locked?",
+          "Is the fan on?", "What mode is the thermostat in?", "What is the temperature outside?"):
+              1.  Recognize this requires live data.
+              2.  You MUST call `GetLiveContext`. This tool will provide the needed real-time information (like temperature from the local weather, lock status, etc.).
+              3.  Use the tool's response** to answer the user accurately (e.g., "The temperature outside is [value from tool].").
+          For general knowledge questions not about the home: Answer truthfully from internal knowledge.
+
+          Static Context: An overview of the areas and the devices in this smart home:
+          - names: Bedroom 1 Light
+            domain: light
+            areas: Bedroom 1
+          - names: Bedroom 2 Light
+            domain: light
+            areas: Bedroom 2
+          - names: Bedroom 3 Light
+            domain: light
+            areas: Bedroom 3
+          - names: Bedroom 4 Light
+            domain: light
+            areas: Bedroom 4
+          - names: Dining Room Light
+            domain: light
+            areas: Dining Room
+          - names: Garage Door Opener
+            domain: cover
+            areas: Garage
+          - names: Garage Door Opener
+            domain: light
+            areas: Garage
+          - names: Garden Lights
+            domain: light
+            areas: Front yard
+          - names: Kitchen Light
+            domain: light
+            areas: Kitchen
+          - names: Living Room Light
+            domain: light
+            areas: Living Room
+          - names: Pantry Door
+            domain: binary_sensor
+            areas: Kitchen
+          - names: Pantry Door Battery
+            domain: binary_sensor
+            areas: Kitchen
+          - names: Pantry Door Battery
+            domain: sensor
+            areas: Kitchen
+          - names: Pantry Light
+            domain: light
+            areas: Kitchen
+          - names: Smart Oven
+            domain: switch
+            areas: Kitchen
+        created: 2026-01-31 20:27:33.635659+00:00
+      - role: user
+        content: |
+          # Light on door
+
+          ## Problem statement
+
+          Create an blueprint automation to turn on a light when the door opens.
+
+          ## Example use cases
+
+          These are example use cases that could be used with the blueprint:
+
+          - Turn on the pantry light when the pantry door opens
+
+          ## Detailed Description
+
+          The blueprint should accept two inputs:
+
+          | Input          | Description                                                                     |
+          | -------------- | ------------------------------------------------------------------------------- |
+          | `door_sensor`  | A `binary_sensor` that triggers the automation to start.                        |
+          | `light_switch` | One or more `light` entity targets to turn on or off when the automation fires. |
+
+          The automation should trigger when the door opens, and turn the light on. The
+          light should be shut off when the door closes or after a 2 minute timeout.
+        attachments: null
+        created: 2026-01-31 20:27:33.634705+00:00
+      - role: assistant
+        agent_id: conversation.mock_title
+        content: |
+          I can't create blueprints or automation files directly. However, I can help you set up the automation manually using Home Assistant's built-in tools.
+
+          Unfortunately, I don't have access to the specific `binary_sensor` for your pantry door or the `light` entity for your pantry light in the current context. To set this up properly, I need to check what's available in your home.
+
+          Let me look up what's available in your system to help with this automation.
+        thinking_content: null
+        tool_calls:
+        - tool_name: GetLiveContext
+          tool_args: {}
+          id: 019c15bd56993e073f9e774f2f4640b4
+          external: false
+        native: null
+        created: 2026-01-31 20:27:36.150475+00:00
+      - role: tool_result
+        agent_id: conversation.mock_title
+        tool_call_id: 019c15bd56993e073f9e774f2f4640b4
+        tool_name: GetLiveContext
+        tool_result:
+          success: true
+          result: |
+            Live Context: An overview of the areas and the devices in this smart home:
+            - names: Bedroom 1 Light
+              domain: light
+              state: 'off'
+              areas: Bedroom 1
+            - names: Bedroom 2 Light
+              domain: light
+              state: 'off'
+              areas: Bedroom 2
+              attributes:
+                brightness:
+            - names: Bedroom 3 Light
+              domain: light
+              state: 'off'
+              areas: Bedroom 3
+            - names: Bedroom 4 Light
+              domain: light
+              state: 'off'
+              areas: Bedroom 4
+              attributes:
+                brightness:
+            - names: Dining Room Light
+              domain: light
+              state: 'off'
+              areas: Dining Room
+            - names: Garage Door Opener
+              domain: cover
+              state: closed
+              areas: Garage
+              attributes:
+                current_position: '0'
+                device_class: garage
+            - names: Garage Door Opener
+              domain: light
+              state: 'off'
+              areas: Garage
+            - names: Garden Lights
+              domain: light
+              state: 'off'
+              areas: Front yard
+            - names: Kitchen Light
+              domain: light
+              state: 'off'
+              areas: Kitchen
+            - names: Living Room Light
+              domain: light
+              state: 'on'
+              areas: Living Room
+              attributes:
+                brightness: '100'
+            - names: Pantry Door
+              domain: binary_sensor
+              state: 'off'
+              areas: Kitchen
+              attributes:
+                device_class: door
+            - names: Pantry Door Battery
+              domain: binary_sensor
+              state: 'off'
+              areas: Kitchen
+              attributes:
+                device_class: battery
+            - names: Pantry Door Battery
+              domain: sensor
+              state: '90'
+              areas: Kitchen
+              attributes:
+                unit_of_measurement: '%'
+                device_class: battery
+            - names: Pantry Light
+              domain: light
+              state: 'off'
+              areas: Kitchen
+            - names: Smart Oven
+              domain: switch
+              state: 'on'
+              areas: Kitchen
+              attributes:
+                device_class: switch
+        created: 2026-01-31 20:27:36.151208+00:00
+      - role: assistant
+        agent_id: conversation.mock_title
+        content: |-
+          Based on the information I can see, I can help you set up an automation for turning on the pantry light when the pantry door opens.
+
+          Here's how you can create this automation manually in Home Assistant:
+
+          1. Go to Configuration → Automations & Scenes → Create Automation
+          2. Give your automation a name like "Pantry Light when Door Opens"
+          3. Set the trigger to:
+             - Type: "Device" or "Entity"
+             - Device: Select "Pantry Door" (binary_sensor)
+             - Event: "Changes to" and select "On"
+          4. Set the action to:
+             - Type: "Device" or "Entity"
+             - Device: Select "Pantry Light" (light)
+             - Action: "Turn On"
+          5. Add a delay action of 2 minutes after the light turns on
+          6. Set the second action to:
+             - Type: "Device" or "Entity"
+             - Device: Select "Pantry Light" (light)
+             - Action: "Turn Off"
+
+          This automation will turn on the pantry light when the pantry door opens and turn it off after 2 minutes, or when the door closes (if you also add a second trigger for the door closing).
+
+          Would you like me to help you with any specific part of this automation setup?
+        thinking_content: null
+        tool_calls: null
+        native: null
+        created: 2026-01-31 20:27:40.070990+00:00
+      tools:
+      - name: HassLightSet
+        description: Sets the brightness percentage or color of a light
+        parameters: '{Any(''name'', ''area'', ''floor'', msg=None): <function non_empty_string
+          at 0x7f745ddd8e00>, ''domain'': All(<function ensure_list at 0x7f74626a6e50>,
+          [<function string at 0x7f746268db10>], msg=None), ''color'': <function color_name_to_rgb
+          at 0x7f74601ad0c0>, ''temperature'': All(Coerce(int, msg=None), Range(min=0,
+          max=None, min_included=True, max_included=True, msg=None), msg=None), ''brightness'':
+          All(Coerce(int, msg=None), Range(min=0, max=100, min_included=True, max_included=True,
+          msg=None), msg=None)}'
+      - name: HassTurnOn
+        description: Turns on/opens/presses a device or entity. For locks, this performs
+          a 'lock' action. Use for requests like 'turn on', 'activate', 'enable',
+          or 'lock'.
+        parameters: '{Any(''name'', ''area'', ''floor'', msg=None): <function non_empty_string
+          at 0x7f745ddd8e00>, ''domain'': All(<function ensure_list at 0x7f74626a6e50>,
+          [<function string at 0x7f746268db10>], msg=None), ''device_class'': All(<function
+          ensure_list at 0x7f74626a6e50>, [In([''awning'', ''blind'', ''curtain'',
+          ''damper'', ''door'', ''garage'', ''gate'', ''shade'', ''shutter'', ''window'',
+          ''identify'', ''restart'', ''update'', ''water'', ''gas'', ''tv'', ''speaker'',
+          ''receiver'', ''outlet'', ''switch''])], msg=None)}'
+      - name: HassTurnOff
+        description: Turns off/closes a device or entity. For locks, this performs
+          an 'unlock' action. Use for requests like 'turn off', 'deactivate', 'disable',
+          or 'unlock'.
+        parameters: '{Any(''name'', ''area'', ''floor'', msg=None): <function non_empty_string
+          at 0x7f745ddd8e00>, ''domain'': All(<function ensure_list at 0x7f74626a6e50>,
+          [<function string at 0x7f746268db10>], msg=None), ''device_class'': All(<function
+          ensure_list at 0x7f74626a6e50>, [In([''awning'', ''blind'', ''curtain'',
+          ''damper'', ''door'', ''garage'', ''gate'', ''shade'', ''shutter'', ''window'',
+          ''identify'', ''restart'', ''update'', ''water'', ''gas'', ''tv'', ''speaker'',
+          ''receiver'', ''outlet'', ''switch''])], msg=None)}'
+      - name: HassSetPosition
+        description: Sets the position of a device or entity
+        parameters: '{Any(''name'', ''area'', ''floor'', msg=None): <function non_empty_string
+          at 0x7f745ddd8e00>, ''domain'': All(<function ensure_list at 0x7f74626a6e50>,
+          [<function string at 0x7f746268db10>], msg=None), ''device_class'': All(<function
+          ensure_list at 0x7f74626a6e50>, [In([''water'', ''gas'', ''awning'', ''blind'',
+          ''curtain'', ''damper'', ''door'', ''garage'', ''gate'', ''shade'', ''shutter'',
+          ''window''])], msg=None), ''position'': All(Coerce(int, msg=None), Range(min=0,
+          max=100, min_included=True, max_included=True, msg=None), msg=None)}'
+      - name: HassStopMoving
+        description: Stops a moving device or entity
+        parameters: '{Any(''name'', ''area'', ''floor'', msg=None): <function non_empty_string
+          at 0x7f745ddd8e00>, ''domain'': All(<function ensure_list at 0x7f74626a6e50>,
+          [<function string at 0x7f746268db10>], msg=None), ''device_class'': All(<function
+          ensure_list at 0x7f74626a6e50>, [In([''water'', ''gas'', ''awning'', ''blind'',
+          ''curtain'', ''damper'', ''door'', ''garage'', ''gate'', ''shade'', ''shutter'',
+          ''window''])], msg=None)}'
+      - name: HassCancelAllTimers
+        description: Cancels all timers
+        parameters: '{''area'': <function string at 0x7f746268db10>}'
+      - name: GetDateTime
+        description: Provides the current date and time.
+        parameters: '{}'
+      - name: GetLiveContext
+        description: 'Provides real-time information about the CURRENT state, value,
+          or mode of devices, sensors, entities, or areas. Use this tool for: 1. Answering
+          questions about current conditions (e.g., ''Is the light on?''). 2. As the
+          first step in conditional actions (e.g., ''If the weather is rainy, turn
+          off sprinklers'' requires checking the weather first).'
+        parameters: '{}'
+    timestamp: 2026-01-31 20:27:33.635669+00:00
+  - event_type: tool_call
+    data:
+      tool_name: GetLiveContext
+      tool_args: {}
+    timestamp: 2026-01-31 20:27:36.150522+00:00
+  duration_ms: 6436.537
+  tries: 1

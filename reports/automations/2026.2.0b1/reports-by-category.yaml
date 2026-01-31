@@ -1,0 +1,22 @@
+---
+- category: fan
+  good_percent: 0.0%
+  confidence_interval: 0.0%
+  good: 0
+  total: 15
+- category: light
+  good_percent: 5.0%
+  confidence_interval: 9.6%
+  good: 1
+  total: 20
+- category: media_player
+  good_percent: 0.0%
+  confidence_interval: 0.0%
+  good: 0
+  total: 10
+- category: vacuum
+  good_percent: 6.7%
+  confidence_interval: 12.6%
+  good: 1
+  total: 15
+

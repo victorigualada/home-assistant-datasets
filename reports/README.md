@@ -15,6 +15,7 @@
 | gpt-oss-20b | $${87.6\\% \space\color{gray}\tiny{\textsf{(CI: 3.0, 2026.1.1)}}}$$ | $${95.4\\% \space\color{gray}\tiny{\textsf{(CI: 2.9, 2026.1.1)}}}$$ | $${79.2\\% \space\color{gray}\tiny{\textsf{(CI: 4.1, 2026.1.1)}}}$$ | $${66.7\\% \space\color{gray}\tiny{\textsf{(CI: 11.9, 2026.1.1)}}}$$ | $${86.0\\% \space\color{gray}\tiny{\textsf{(CI: 2.1, avg)}}}$$ |
 | gpt-4.1 | $${81.2\\% \space\color{gray}\tiny{\textsf{(CI: 3.6, 2025.4.3)}}}$$ | $${96.9\\% \space\color{gray}\tiny{\textsf{(CI: 2.4, 2025.4.3)}}}$$ | $${85.4\\% \space\color{gray}\tiny{\textsf{(CI: 5.1, 2025.4.3)}}}$$ | $${76.7\\% \space\color{gray}\tiny{\textsf{(CI: 10.7, 2025.4.3)}}}$$ | $${85.8\\% \space\color{gray}\tiny{\textsf{(CI: 2.4, avg)}}}$$ |
 | qwen3-32b | $${79.3\\% \space\color{gray}\tiny{\textsf{(CI: 3.7, 2026.1.1)}}}$$ | $${95.9\\% \space\color{gray}\tiny{\textsf{(CI: 2.8, 2026.1.1)}}}$$ | $${87.3\\% \space\color{gray}\tiny{\textsf{(CI: 3.4, 2026.1.1)}}}$$ | $${10.0\\% \space\color{gray}\tiny{\textsf{(CI: 7.6, 2026.1.1)}}}$$ | $${85.4\\% \space\color{gray}\tiny{\textsf{(CI: 2.2, avg)}}}$$ |
+| qwen3-coder-30b-a3b-instruct | $${79.8\\% \space\color{gray}\tiny{\textsf{(CI: 3.7, 2026.2.0b1)}}}$$ | $${88.8\\% \space\color{gray}\tiny{\textsf{(CI: 4.4, 2026.2.0b1)}}}$$ | $${88.9\\% \space\color{gray}\tiny{\textsf{(CI: 3.2, 2026.2.0b1)}}}$$ | $${3.3\\% \space\color{gray}\tiny{\textsf{(CI: 4.5, 2026.2.0b1)}}}$$ | $${84.8\\% \space\color{gray}\tiny{\textsf{(CI: 2.2, avg)}}}$$ |
 | gpt-3.5 | $${86.5\\% \space\color{gray}\tiny{\textsf{(CI: 3.1, 2025.4.3)}}}$$ | $${99.5\\% \space\color{gray}\tiny{\textsf{(CI: 1.0, 2025.4.3)}}}$$ | $${73.2\\% \space\color{gray}\tiny{\textsf{(CI: 4.5, 2025.5.0.dev0)}}}$$ | $${66.7\\% \space\color{gray}\tiny{\textsf{(CI: 11.9, 2025.4.3)}}}$$ | $${84.2\\% \space\color{gray}\tiny{\textsf{(CI: 2.2, avg)}}}$$ |
 | gemini-1.5-flash | $${88.9\\% \space\color{gray}\tiny{\textsf{(CI: 2.9, 2025.4.3)}}}$$ | $${96.9\\% \space\color{gray}\tiny{\textsf{(CI: 2.4, 2025.4.3)}}}$$ | $${70.8\\% \space\color{gray}\tiny{\textsf{(CI: 4.6, 2025.5.0.dev0)}}}$$ | $${28.3\\% \space\color{gray}\tiny{\textsf{(CI: 11.4, 2025.4.3)}}}$$ | $${83.9\\% \space\color{gray}\tiny{\textsf{(CI: 2.2, avg)}}}$$ |
 | qwen3-14b | $${79.3\\% \space\color{gray}\tiny{\textsf{(CI: 3.7, 2026.1.1)}}}$$ | $${98.0\\% \space\color{gray}\tiny{\textsf{(CI: 2.0, 2026.1.1)}}}$$ | $${80.3\\% \space\color{gray}\tiny{\textsf{(CI: 4.1, 2026.1.1)}}}$$ | $${5.0\\% \space\color{gray}\tiny{\textsf{(CI: 5.5, 2026.1.1)}}}$$ | $${83.2\\% \space\color{gray}\tiny{\textsf{(CI: 2.3, avg)}}}$$ |
@@ -390,6 +391,7 @@ As the strongest model in the 30B class, GLM-4.7-Flash offers a new option for l
 
 More information:
 - https://huggingface.co/zai-org/GLM-4.7-Flash
+- https://ollama.com/library/glm-4.7-flash
 
 
 ### gpt-3.5
@@ -617,3 +619,13 @@ Qwen3 is the large language model series developed by Qwen team, Alibaba Cloud. 
 More information:
 - https://qwenlm.github.io/blog/qwen3/
 - https://ollama.com/library/qwen3
+
+
+### qwen3-coder-30b-a3b-instruct
+
+Qwen3-Coder-30B-A3B-Instruct is a 30.5B parameter Mixture-of-Experts (MoE) model with 128 experts (8 active per forward pass), designed for advanced code generation, repository-scale understanding, and agentic tool use. Built on the Qwen3 architecture, it supports a native context length of 256K tokens (extendable to 1M with Yarn) and performs strongly in tasks involving function calls, browser use, and structured code completion.  This model is optimized for instruction-following without “thinking mode”, and integrates well with OpenAI-compatible tool-use formats.
+
+
+
+More information:
+- https://openrouter.ai/qwen/qwen3-coder-30b-a3b-instruct

@@ -1,0 +1,19 @@
+---
+uuid: a8192c3c-b5eb-4829-a1ce-3903d2cdec2c
+timestamp: 2026-01-31 20:25:50.287820
+scrape_config:
+  dataset: questions
+  dataset_path: datasets/questions
+  dataset_version: null
+  model_id: qwen3-coder-30b-a3b-instruct
+  model_output_path: reports/questions/2026.2.0b1
+version: 2026.2.0b1
+context:
+  user: runner
+  argv:
+  - /home/runner/work/openrouter-benchmarks/openrouter-benchmarks/.venv/bin/pytest
+  - home_assistant_datasets/tool/assist/collect
+  - --models=qwen3-coder-30b-a3b-instruct
+  - --dataset=datasets/questions/
+  - --model_output_dir=reports/questions/2026.2.0b1
+notes: ''

@@ -1,0 +1,7 @@
+---
+- model_id: qwen3-coder-30b-a3b-instruct
+  good_percent: 88.8%
+  confidence_interval: 4.4%
+  good: 174
+  total: 196
+

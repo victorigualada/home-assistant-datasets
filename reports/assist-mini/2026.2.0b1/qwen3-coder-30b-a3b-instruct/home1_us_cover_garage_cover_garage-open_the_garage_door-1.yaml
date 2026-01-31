@@ -1,0 +1,290 @@
+---
+uuid: caa6d418-2e7f-4307-9e29-38ac6f04ae71
+task_id: home1_us_cover_garage_cover_garage-open_the_garage_door-1
+model_id: qwen3-coder-30b-a3b-instruct
+category: cover
+task:
+  input_text: Open the garage door
+  expect_changes:
+    cover.garage_door_opener:
+      state: open
+      attributes: null
+response: "I've successfully opened the garage door. The system has confirmed that\
+  \ the action was completed for the entity named \"Garage Door Opener\" with the\
+  \ type \"entity\" and ID \"cover.garage_door_opener\". \n\nThe garage door should\
+  \ now be open."
+context:
+  unexpected_states: {}
+  conversation_trace:
+  - event_type: async_process
+    data:
+      text: Open the garage door
+      context:
+        id: 01KGAVY7S41PKYQRPMX62C08TH
+        parent_id: null
+        user_id: null
+      conversation_id: null
+      device_id: null
+      satellite_id: null
+      language: en
+      agent_id: conversation.mock_title
+      extra_system_prompt: null
+    timestamp: 2026-01-31 20:29:32.836697+00:00
+  - event_type: agent_detail
+    data:
+      messages:
+      - role: system
+        content: |
+          You are a voice assistant for Home Assistant.
+          Answer questions about the world truthfully.
+          Answer in plain text. Keep it simple and to the point.
+          When controlling Home Assistant always call the intent tools. Use HassTurnOn to lock and HassTurnOff to unlock a lock. When controlling a device, prefer passing just name and domain. When controlling an area, prefer passing just area name and domain.
+          When a user asks to turn on all devices of a specific type, ask user to specify an area, unless there is only one device of that type.
+          This device is not able to start timers.
+          You ARE equipped to answer questions about the current state of
+          the home using the `GetLiveContext` tool. This is a primary function. Do not state you lack the
+          functionality if the question requires live data.
+          If the user asks about device existence/type (e.g., "Do I have lights in the bedroom?"): Answer
+          from the static context below.
+          If the user asks about the CURRENT state, value, or mode (e.g., "Is the lock locked?",
+          "Is the fan on?", "What mode is the thermostat in?", "What is the temperature outside?"):
+              1.  Recognize this requires live data.
+              2.  You MUST call `GetLiveContext`. This tool will provide the needed real-time information (like temperature from the local weather, lock status, etc.).
+              3.  Use the tool's response** to answer the user accurately (e.g., "The temperature outside is [value from tool].").
+          For general knowledge questions not about the home: Answer truthfully from internal knowledge.
+
+          Static Context: An overview of the areas and the devices in this smart home:
+          - names: Garage Door Opener
+            domain: cover
+            areas: Garage
+          - names: Garage Door Opener
+            domain: light
+            areas: Garage
+        created: 2026-01-31 20:29:32.837407+00:00
+      - role: user
+        content: Open the garage door
+        attachments: null
+        created: 2026-01-31 20:29:32.836762+00:00
+      - role: assistant
+        agent_id: conversation.mock_title
+        content: null
+        thinking_content: null
+        tool_calls:
+        - tool_name: HassTurnOn
+          tool_args:
+            name: Garage Door Opener
+            domain: '["cover"]'
+          id: 019c15bf23c4c224b091e5d24e4325a9
+          external: false
+        native: null
+        created: 2026-01-31 20:29:34.532346+00:00
+      - role: tool_result
+        agent_id: conversation.mock_title
+        tool_call_id: 019c15bf23c4c224b091e5d24e4325a9
+        tool_name: HassTurnOn
+        tool_result:
+          error: MatchFailedError
+          error_text: '<MatchFailedError result=MatchTargetsResult(is_match=False,
+            no_match_reason=<MatchFailedReason.DOMAIN: 4>, states=[], no_match_name=None,
+            areas=[], floors=[]), constraints=MatchTargetsConstraints(name=''Garage
+            Door Opener'', area_name=None, floor_name=None, domains={''["cover"]''},
+            device_classes=None, features=None, states=None, assistant=''conversation'',
+            allow_duplicate_names=False, single_target=False), preferences=MatchTargetsPreferences(area_id=None,
+            floor_id=None)>'
+        created: 2026-01-31 20:29:34.532760+00:00
+      - role: assistant
+        agent_id: conversation.mock_title
+        content: |
+          I couldn't open the garage door. It seems there was an issue with the command. Let me try again.
+        thinking_content: null
+        tool_calls:
+        - tool_name: HassTurnOn
+          tool_args:
+            name: Garage Door Opener
+            domain: '["cover"]'
+          id: 019c15bf2bf827694ddd4b4686a6ad50
+          external: false
+        native: null
+        created: 2026-01-31 20:29:36.822227+00:00
+      - role: tool_result
+        agent_id: conversation.mock_title
+        tool_call_id: 019c15bf2bf827694ddd4b4686a6ad50
+        tool_name: HassTurnOn
+        tool_result:
+          error: MatchFailedError
+          error_text: '<MatchFailedError result=MatchTargetsResult(is_match=False,
+            no_match_reason=<MatchFailedReason.DOMAIN: 4>, states=[], no_match_name=None,
+            areas=[], floors=[]), constraints=MatchTargetsConstraints(name=''Garage
+            Door Opener'', area_name=None, floor_name=None, domains={''["cover"]''},
+            device_classes=None, features=None, states=None, assistant=''conversation'',
+            allow_duplicate_names=False, single_target=False), preferences=MatchTargetsPreferences(area_id=None,
+            floor_id=None)>'
+        created: 2026-01-31 20:29:36.822487+00:00
+      - role: assistant
+        agent_id: conversation.mock_title
+        content: |+
+          I'm having trouble opening the garage door. It seems there might be an issue with how the system is interpreting the device. Let me try using a different approach.
+
+        thinking_content: null
+        tool_calls:
+        - tool_name: HassTurnOn
+          tool_args:
+            name: Garage Door Opener
+            device_class: '["garage"]'
+          id: 019c15bf35c84ea0367cf86fe7fcddb3
+          external: false
+        native: null
+        created: 2026-01-31 20:29:39.208890+00:00
+      - role: tool_result
+        agent_id: conversation.mock_title
+        tool_call_id: 019c15bf35c84ea0367cf86fe7fcddb3
+        tool_name: HassTurnOn
+        tool_result:
+          error: InvalidSlotInfo
+          error_text: Received invalid slot info for HassTurnOn
+        created: 2026-01-31 20:29:39.209225+00:00
+      - role: assistant
+        agent_id: conversation.mock_title
+        content: |+
+          I apologize for the difficulty in opening the garage door. It seems there might be some confusion with the device naming or classification in the system.
+
+          Looking at the static context, I can see there's a "Garage Door Opener" that is classified as a cover device. However, the system is having trouble matching this device properly.
+
+          Let me try one more approach using the specific device name directly:
+
+        thinking_content: null
+        tool_calls:
+        - tool_name: HassTurnOn
+          tool_args:
+            name: Garage Door Opener
+            domain: cover
+          id: 2a06668f448440a1b06b69b8f88adbf4
+          external: false
+        native: null
+        created: 2026-01-31 20:29:41.366024+00:00
+      - role: tool_result
+        agent_id: conversation.mock_title
+        tool_call_id: 2a06668f448440a1b06b69b8f88adbf4
+        tool_name: HassTurnOn
+        tool_result:
+          dictitems:
+            speech:
+              plain:
+                speech: "I've successfully opened the garage door. The system has\
+                  \ confirmed that the action was completed for the entity named \"\
+                  Garage Door Opener\" with the type \"entity\" and ID \"cover.garage_door_opener\"\
+                  . \n\nThe garage door should now be open."
+                extra_data: null
+            response_type: action_done
+            data:
+              targets: []
+              success:
+              - name: Garage Door Opener
+                type:
+                - entity
+                id: cover.garage_door_opener
+              failed: []
+        created: 2026-01-31 20:29:41.366633+00:00
+      - role: assistant
+        agent_id: conversation.mock_title
+        content: "I've successfully opened the garage door. The system has confirmed\
+          \ that the action was completed for the entity named \"Garage Door Opener\"\
+          \ with the type \"entity\" and ID \"cover.garage_door_opener\". \n\nThe\
+          \ garage door should now be open."
+        thinking_content: null
+        tool_calls: null
+        native: null
+        created: 2026-01-31 20:29:43.402226+00:00
+      tools:
+      - name: HassLightSet
+        description: Sets the brightness percentage or color of a light
+        parameters: '{Any(''name'', ''area'', ''floor'', msg=None): <function non_empty_string
+          at 0x7fad51fe4e00>, ''domain'': All(<function ensure_list at 0x7fad56ba6e50>,
+          [<function string at 0x7fad56b8db10>], msg=None), ''color'': <function color_name_to_rgb
+          at 0x7fad546750c0>, ''temperature'': All(Coerce(int, msg=None), Range(min=0,
+          max=None, min_included=True, max_included=True, msg=None), msg=None), ''brightness'':
+          All(Coerce(int, msg=None), Range(min=0, max=100, min_included=True, max_included=True,
+          msg=None), msg=None)}'
+      - name: HassTurnOn
+        description: Turns on/opens/presses a device or entity. For locks, this performs
+          a 'lock' action. Use for requests like 'turn on', 'activate', 'enable',
+          or 'lock'.
+        parameters: '{Any(''name'', ''area'', ''floor'', msg=None): <function non_empty_string
+          at 0x7fad51fe4e00>, ''domain'': All(<function ensure_list at 0x7fad56ba6e50>,
+          [<function string at 0x7fad56b8db10>], msg=None), ''device_class'': All(<function
+          ensure_list at 0x7fad56ba6e50>, [In([''awning'', ''blind'', ''curtain'',
+          ''damper'', ''door'', ''garage'', ''gate'', ''shade'', ''shutter'', ''window'',
+          ''tv'', ''speaker'', ''receiver'', ''water'', ''gas'', ''identify'', ''restart'',
+          ''update'', ''outlet'', ''switch''])], msg=None)}'
+      - name: HassTurnOff
+        description: Turns off/closes a device or entity. For locks, this performs
+          an 'unlock' action. Use for requests like 'turn off', 'deactivate', 'disable',
+          or 'unlock'.
+        parameters: '{Any(''name'', ''area'', ''floor'', msg=None): <function non_empty_string
+          at 0x7fad51fe4e00>, ''domain'': All(<function ensure_list at 0x7fad56ba6e50>,
+          [<function string at 0x7fad56b8db10>], msg=None), ''device_class'': All(<function
+          ensure_list at 0x7fad56ba6e50>, [In([''awning'', ''blind'', ''curtain'',
+          ''damper'', ''door'', ''garage'', ''gate'', ''shade'', ''shutter'', ''window'',
+          ''tv'', ''speaker'', ''receiver'', ''water'', ''gas'', ''identify'', ''restart'',
+          ''update'', ''outlet'', ''switch''])], msg=None)}'
+      - name: HassSetPosition
+        description: Sets the position of a device or entity
+        parameters: '{Any(''name'', ''area'', ''floor'', msg=None): <function non_empty_string
+          at 0x7fad51fe4e00>, ''domain'': All(<function ensure_list at 0x7fad56ba6e50>,
+          [<function string at 0x7fad56b8db10>], msg=None), ''device_class'': All(<function
+          ensure_list at 0x7fad56ba6e50>, [In([''awning'', ''blind'', ''curtain'',
+          ''damper'', ''door'', ''garage'', ''gate'', ''shade'', ''shutter'', ''window'',
+          ''water'', ''gas''])], msg=None), ''position'': All(Coerce(int, msg=None),
+          Range(min=0, max=100, min_included=True, max_included=True, msg=None), msg=None)}'
+      - name: HassStopMoving
+        description: Stops a moving device or entity
+        parameters: '{Any(''name'', ''area'', ''floor'', msg=None): <function non_empty_string
+          at 0x7fad51fe4e00>, ''domain'': All(<function ensure_list at 0x7fad56ba6e50>,
+          [<function string at 0x7fad56b8db10>], msg=None), ''device_class'': All(<function
+          ensure_list at 0x7fad56ba6e50>, [In([''awning'', ''blind'', ''curtain'',
+          ''damper'', ''door'', ''garage'', ''gate'', ''shade'', ''shutter'', ''window'',
+          ''water'', ''gas''])], msg=None)}'
+      - name: HassCancelAllTimers
+        description: Cancels all timers
+        parameters: '{''area'': <function string at 0x7fad56b8db10>}'
+      - name: GetDateTime
+        description: Provides the current date and time.
+        parameters: '{}'
+      - name: GetLiveContext
+        description: 'Provides real-time information about the CURRENT state, value,
+          or mode of devices, sensors, entities, or areas. Use this tool for: 1. Answering
+          questions about current conditions (e.g., ''Is the light on?''). 2. As the
+          first step in conditional actions (e.g., ''If the weather is rainy, turn
+          off sprinklers'' requires checking the weather first).'
+        parameters: '{}'
+    timestamp: 2026-01-31 20:29:32.837415+00:00
+  - event_type: tool_call
+    data:
+      tool_name: HassTurnOn
+      tool_args:
+        name: Garage Door Opener
+        domain: '["cover"]'
+    timestamp: 2026-01-31 20:29:34.532389+00:00
+  - event_type: tool_call
+    data:
+      tool_name: HassTurnOn
+      tool_args:
+        name: Garage Door Opener
+        domain: '["cover"]'
+    timestamp: 2026-01-31 20:29:36.822267+00:00
+  - event_type: tool_call
+    data:
+      tool_name: HassTurnOn
+      tool_args:
+        name: Garage Door Opener
+        device_class: '["garage"]'
+    timestamp: 2026-01-31 20:29:39.208934+00:00
+  - event_type: tool_call
+    data:
+      tool_name: HassTurnOn
+      tool_args:
+        name: Garage Door Opener
+        domain: cover
+    timestamp: 2026-01-31 20:29:41.366065+00:00
+  duration_ms: 10565.717
+  tries: 1
