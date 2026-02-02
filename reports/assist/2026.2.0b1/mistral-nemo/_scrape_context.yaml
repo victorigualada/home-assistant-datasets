@@ -1,0 +1,19 @@
+---
+uuid: 67ff02b4-37b9-403f-b25c-00af451720cb
+timestamp: 2026-02-02 11:04:39.906177
+scrape_config:
+  dataset: assist
+  dataset_path: datasets/assist
+  dataset_version: v2
+  model_id: mistral-nemo
+  model_output_path: reports/assist/2026.2.0b1
+version: 2026.2.0b1
+context:
+  user: runner
+  argv:
+  - /home/runner/work/openrouter-benchmarks/openrouter-benchmarks/.venv/bin/pytest
+  - home_assistant_datasets/tool/assist/collect
+  - --models=mistral-nemo
+  - --dataset=datasets/assist/
+  - --model_output_dir=reports/assist/2026.2.0b1
+notes: ''
