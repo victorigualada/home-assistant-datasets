@@ -22,6 +22,7 @@
 | ministral-3-3b | $${72.0\\% \space\color{gray}\tiny{\textsf{(CI: 4.1, 2026.1.1)}}}$$ | $${81.6\\% \space\color{gray}\tiny{\textsf{(CI: 5.4, 2026.1.1)}}}$$ | $${90.3\\% \space\color{gray}\tiny{\textsf{(CI: 3.0, 2026.1.1)}}}$$ | $${0.0\\% \space\color{gray}\tiny{\textsf{(CI: 0.0, 2026.1.1)}}}$$ | $${80.4\\% \space\color{gray}\tiny{\textsf{(CI: 2.4, avg)}}}$$ |
 | qwen3-8b | $${82.8\\% \space\color{gray}\tiny{\textsf{(CI: 3.4, 2025.7.1)}}}$$ | $${93.4\\% \space\color{gray}\tiny{\textsf{(CI: 3.5, 2025.7.1)}}}$$ | $${70.0\\% \space\color{gray}\tiny{\textsf{(CI: 4.7, 2025.7.1)}}}$$ | $${1.7\\% \space\color{gray}\tiny{\textsf{(CI: 3.2, 2025.7.1)}}}$$ | $${80.2\\% \space\color{gray}\tiny{\textsf{(CI: 2.4, avg)}}}$$ |
 | gpt-4.1-nano | $${74.7\\% \space\color{gray}\tiny{\textsf{(CI: 4.0, 2025.4.3)}}}$$ | $${92.9\\% \space\color{gray}\tiny{\textsf{(CI: 3.6, 2025.4.3)}}}$$ | $${75.9\\% \space\color{gray}\tiny{\textsf{(CI: 4.4, 2025.5.0.dev0)}}}$$ | $${46.7\\% \space\color{gray}\tiny{\textsf{(CI: 12.6, 2025.4.3)}}}$$ | $${78.6\\% \space\color{gray}\tiny{\textsf{(CI: 2.5, avg)}}}$$ |
+| gpt-oss-120b |  |  | $${77.0\\% \space\color{gray}\tiny{\textsf{(CI: 4.3, 2026.2.0b1)}}}$$ |  | $${77.0\\% \space\color{gray}\tiny{\textsf{(CI: 4.3, avg)}}}$$ |
 | gemini-2.0-flash | $${68.7\\% \space\color{gray}\tiny{\textsf{(CI: 4.2, 2025.4.3)}}}$$ | $${90.3\\% \space\color{gray}\tiny{\textsf{(CI: 4.1, 2025.4.3)}}}$$ | $${78.4\\% \space\color{gray}\tiny{\textsf{(CI: 5.9, 2025.4.3)}}}$$ | $${71.7\\% \space\color{gray}\tiny{\textsf{(CI: 11.4, 2025.4.3)}}}$$ | $${75.9\\% \space\color{gray}\tiny{\textsf{(CI: 2.9, avg)}}}$$ |
 | qwen3-4b-instruct | $${71.7\\% \space\color{gray}\tiny{\textsf{(CI: 4.1, 2026.1.1)}}}$$ | $${86.7\\% \space\color{gray}\tiny{\textsf{(CI: 4.7, 2026.1.1)}}}$$ | $${74.1\\% \space\color{gray}\tiny{\textsf{(CI: 4.5, 2026.1.1)}}}$$ | $${0.0\\% \space\color{gray}\tiny{\textsf{(CI: 0.0, 2026.1.1)}}}$$ | $${75.4\\% \space\color{gray}\tiny{\textsf{(CI: 2.6, avg)}}}$$ |
 | qwen3-4b-instruct-2507-iq4-nl | $${71.3\\% \space\color{gray}\tiny{\textsf{(CI: 4.1, 2025.12.4)}}}$$ |  |  |  | $${71.3\\% \space\color{gray}\tiny{\textsf{(CI: 4.1, avg)}}}$$ |
@@ -508,6 +509,16 @@ None
 
 More information:
 - https://platform.openai.com/docs/models/gpt-4o-mini
+
+
+### gpt-oss-120b
+
+gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized to run on a single H100 GPU with native MXFP4 quantization. The model supports configurable reasoning depth, full chain-of-thought access, and native tool use, including function calling, browsing, and structured output generation.
+
+
+
+More information:
+- https://openrouter.ai/openai/gpt-oss-120b
 
 
 ### gpt-oss-20b
