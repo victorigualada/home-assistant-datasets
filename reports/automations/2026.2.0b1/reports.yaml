@@ -4,4 +4,9 @@
   confidence_interval: 12.4%
   good: 36
   total: 60
+- model_id: mistral-nemo
+  good_percent: 0.0%
+  confidence_interval: 0.0%
+  good: 0
+  total: 60
 
