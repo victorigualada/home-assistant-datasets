@@ -1,0 +1,19 @@
+---
+uuid: c0e6c7e3-b2b1-4d4b-8a56-be2c2955848c
+timestamp: 2026-02-03 07:29:24.256531
+scrape_config:
+  dataset: questions
+  dataset_path: datasets/questions
+  dataset_version: null
+  model_id: gpt-oss-120b
+  model_output_path: reports/questions/2026.2.0b1
+version: 2026.2.0b1
+context:
+  user: runner
+  argv:
+  - /home/runner/work/openrouter-benchmarks/openrouter-benchmarks/.venv/bin/pytest
+  - home_assistant_datasets/tool/assist/collect
+  - --models=gpt-oss-120b
+  - --dataset=datasets/questions/
+  - --model_output_dir=reports/questions/2026.2.0b1
+notes: ''

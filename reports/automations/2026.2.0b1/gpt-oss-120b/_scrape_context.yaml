@@ -1,0 +1,19 @@
+---
+uuid: 2505bb39-7e81-4d73-b30f-8c26fdc97b6e
+timestamp: 2026-02-03 07:29:20.203144
+scrape_config:
+  dataset: automations
+  dataset_path: datasets/automations
+  dataset_version: v0
+  model_id: gpt-oss-120b
+  model_output_path: reports/automations/2026.2.0b1
+version: 2026.2.0b1
+context:
+  user: runner
+  argv:
+  - /home/runner/work/openrouter-benchmarks/openrouter-benchmarks/.venv/bin/pytest
+  - home_assistant_datasets/tool/automation/collect
+  - --models=gpt-oss-120b
+  - --dataset=datasets/automations/
+  - --model_output_dir=reports/automations/2026.2.0b1
+notes: ''
