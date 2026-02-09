@@ -1,0 +1,26 @@
+---
+model_id: deepseek-r1-distill-llama-70b
+domain: open_router
+description: DeepSeek R1 Distill Llama 70B is a distilled large language model based on [Llama-3.3-70B-Instruct](/meta-llama/llama-3.3-70b-instruct), using outputs from [DeepSeek R1](/deepseek/deepseek-r1). The model combines advanced distillation techniques to achieve high performance across multiple benchmarks, including:  - AIME 2024 pass@1: 70.0 - MATH-500 pass@1: 94.5 - CodeForces Rating: 1633  The model leverages fine-tuning from DeepSeek R1's outputs, enabling competitive performance comparable to larger frontier models.
+categories:
+  - openrouter
+  - cloud
+urls:
+  - https://openrouter.ai/deepseek/deepseek-r1-distill-llama-70b
+config_entry_data:
+  api_key: !secret openrouter_api_key
+subentries_data:
+  - subentry_type: conversation
+    title: Mock Title
+    data:
+      model: deepseek/deepseek-r1-distill-llama-70b
+      llm_hass_api: assist
+  - subentry_type: ai_task_data
+    title: Mock Title
+    data:
+      model: deepseek/deepseek-r1-distill-llama-70b
+      llm_hass_api: assist
+rpm: 250
+cost:
+  input_tokens: 0.03
+  output_tokens: 0.11
