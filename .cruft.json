@@ -1,6 +1,6 @@
 {
   "template": "http://github.com/allenporter/cookiecutter-python",
-  "commit": "285470c00d43779a0dca3f1cc2009c658e294443",
+  "commit": "1842707db4692bca10f0988efe2d02772a25e3de",
   "checkout": null,
   "context": {
     "cookiecutter": {
@@ -11,7 +11,7 @@
       "description": "Library and tools for building datasets related to Home Assistant.",
       "version": "0.0.1",
       "_template": "http://github.com/allenporter/cookiecutter-python",
-      "_commit": "285470c00d43779a0dca3f1cc2009c658e294443"
+      "_commit": "1842707db4692bca10f0988efe2d02772a25e3de"
     }
   },
   "directory": null
