@@ -37,6 +37,8 @@
 | gemini-2.0-flash-lite | $${65.9\\% \space\color{gray}\tiny{\textsf{(CI: 4.3, 2025.4.3)}}}$$ | $${88.3\\% \space\color{gray}\tiny{\textsf{(CI: 4.5, 2025.4.3)}}}$$ | $${63.2\\% \space\color{gray}\tiny{\textsf{(CI: 4.9, 2025.5.0.dev0)}}}$$ | $${53.3\\% \space\color{gray}\tiny{\textsf{(CI: 12.6, 2025.4.3)}}}$$ | $${69.2\\% \space\color{gray}\tiny{\textsf{(CI: 2.8, avg)}}}$$ |
 | gemma4-e2b | $${45.2\\% \space\color{gray}\tiny{\textsf{(CI: 4.5, 2026.2.3)}}}$$ | $${61.2\\% \space\color{gray}\tiny{\textsf{(CI: 6.8, 2026.2.3)}}}$$ | $${73.5\\% \space\color{gray}\tiny{\textsf{(CI: 4.5, 2026.2.3)}}}$$ |  | $${58.5\\% \space\color{gray}\tiny{\textsf{(CI: 3.0, avg)}}}$$ |
 | qwen3-1.7b | $${35.9\\% \space\color{gray}\tiny{\textsf{(CI: 4.4, 2025.7.1)}}}$$ | $${60.2\\% \space\color{gray}\tiny{\textsf{(CI: 6.9, 2025.7.1)}}}$$ | $${59.5\\% \space\color{gray}\tiny{\textsf{(CI: 5.0, 2025.7.1)}}}$$ | $${0.0\\% \space\color{gray}\tiny{\textsf{(CI: 0.0, 2025.7.1)}}}$$ | $${49.0\\% \space\color{gray}\tiny{\textsf{(CI: 3.1, avg)}}}$$ |
+| deepseek-r1-distill-llama-70b | $${8.7\\% \space\color{gray}\tiny{\textsf{(CI: 2.6, 2026.7.4)}}}$$ | $${0.0\\% \space\color{gray}\tiny{\textsf{(CI: 0.0, 2026.7.4)}}}$$ | $${2.7\\% \space\color{gray}\tiny{\textsf{(CI: 1.7, 2026.7.4)}}}$$ | $${0.0\\% \space\color{gray}\tiny{\textsf{(CI: 0.0, 2026.7.4)}}}$$ | $${4.9\\% \space\color{gray}\tiny{\textsf{(CI: 1.3, avg)}}}$$ |
+| assistant | $${0.0\\% \space\color{gray}\tiny{\textsf{(CI: 0.0, 2026.7.4)}}}$$ |  |  |  | $${0.0\\% \space\color{gray}\tiny{\textsf{(CI: 0.0, avg)}}}$$ |
 
 Implementation notes:
 - CI is large given small number of samples in the datasets.
@@ -257,17 +259,14 @@ xychart-beta
 ```
 ## Models
 
-### qwen3.6-27b
+### assistant
 
-Qwen 3.6 27B (Q6_K) running with reasoning off behind an
-OpenAI-compatible server. Developed by Alibaba Cloud,
-this model is optimized for agentic coding.
-
+The Home Assisatnt NLP assistant pipeline
 
 
 
 More information:
-- https://huggingface.co/unsloth/Qwen3.6-27B
+- https://github.com/home-assistant/hassil
 
 
 ### claude-3-5-haiku
@@ -292,6 +291,16 @@ capability with toggleable extended thinking
 
 More information:
 - https://www.anthropic.com/news/claude-3-7-sonnet
+
+
+### deepseek-r1-distill-llama-70b
+
+DeepSeek R1 Distill Llama 70B is a distilled large language model based on [Llama-3.3-70B-Instruct](/meta-llama/llama-3.3-70b-instruct), using outputs from [DeepSeek R1](/deepseek/deepseek-r1). The model combines advanced distillation techniques to achieve high performance across...
+
+
+
+More information:
+- https://openrouter.ai/deepseek/deepseek-r1-distill-llama-70b
 
 
 ### devstral-2512
@@ -761,3 +770,16 @@ this model is optimized for efficient text processing.
 
 More information:
 - https://huggingface.co/unsloth/Qwen3.5-4B
+
+
+### qwen3.6-27b
+
+Qwen 3.6 27B (Q6_K) running with reasoning off behind an
+OpenAI-compatible server. Developed by Alibaba Cloud,
+this model is optimized for agentic coding.
+
+
+
+
+More information:
+- https://huggingface.co/unsloth/Qwen3.6-27B

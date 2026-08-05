@@ -1,0 +1,12 @@
+---
+- model_id: assistant
+  good_percent: 0.0%
+  confidence_interval: 0.0%
+  good: 0
+  total: 13
+- model_id: deepseek-r1-distill-llama-70b
+  good_percent: 8.7%
+  confidence_interval: 2.6%
+  good: 40
+  total: 460
+
