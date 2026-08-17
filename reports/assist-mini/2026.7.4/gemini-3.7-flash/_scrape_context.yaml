@@ -1,0 +1,19 @@
+---
+uuid: e89019e0-4aba-4288-8069-f08d36d07946
+timestamp: 2026-08-17 22:23:12.897390
+scrape_config:
+  dataset: assist-mini
+  dataset_path: datasets/assist-mini
+  dataset_version: v1
+  model_id: gemini-3.7-flash
+  model_output_path: reports/assist-mini/2026.7.4
+version: 2026.7.4
+context:
+  user: runner
+  argv:
+  - /home/runner/work/openrouter-benchmarks/openrouter-benchmarks/.venv/bin/pytest
+  - home_assistant_datasets/tool/assist/collect
+  - --models=gemini-3.7-flash
+  - --dataset=datasets/assist-mini/
+  - --model_output_dir=reports/assist-mini/2026.7.4
+notes: ''

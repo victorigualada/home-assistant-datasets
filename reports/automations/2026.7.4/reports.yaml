@@ -1,0 +1,7 @@
+---
+- model_id: gemini-3.7-flash
+  good_percent: 81.7%
+  confidence_interval: 9.8%
+  good: 49
+  total: 60
+
