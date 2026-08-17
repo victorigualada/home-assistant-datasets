@@ -1,0 +1,26 @@
+---
+model_id: gemini-3.7-flash
+domain: open_router
+description: "Gemini 3.7 Flash is a multimodal model from Google for fast agentic workflows, coding, and complex multi-step reasoning. It is designed for tasks that require responsive performance and reliable multi-step..."
+categories:
+  - openrouter
+  - cloud
+urls:
+  - https://openrouter.ai/google/gemini-3.7-flash
+config_entry_data:
+  api_key: !secret openrouter_api_key
+subentries_data:
+  - subentry_type: conversation
+    title: Mock Title
+    data:
+      model: google/gemini-3.7-flash
+      llm_hass_api: assist
+  - subentry_type: ai_task_data
+    title: Mock Title
+    data:
+      model: google/gemini-3.7-flash
+      llm_hass_api: assist
+rpm: 250
+cost:
+  input_tokens: 0.375
+  output_tokens: 1.875
